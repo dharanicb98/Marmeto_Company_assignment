@@ -3,6 +3,10 @@ let description = document.getElementById("description");
 const discount = document.getElementById('discount');
 const comparePrice = document.getElementById("comparePrice");
 const productImage = document.getElementById("#productImage");
+const firstColor = document.getElementById("firstColor");
+const secondColor = document.getElementById("secondColor");
+const thirdColor = document.getElementById("thirdColor");
+const fourthColor = document.getElementById("fourthColor");
 
 const addToCartButton = document.querySelector('.add_to_cart');
 const addToCartMessage = document.querySelector('.add-to-cart-message');
@@ -13,6 +17,32 @@ addToCartButton.addEventListener('click', () => {
         addToCartMessage.style.display = 'none';
     }, 2000);
 });
+
+firstColor.addEventListener('click', () => {
+    firstColor.textContent = "✔";
+    secondColor.textContent = "";
+    thirdColor.textContent = "";
+    fourthColor.textContent = "";
+});
+secondColor.addEventListener('click', () => {
+    firstColor.textContent = "";
+    secondColor.textContent = "✔";
+    thirdColor.textContent = "";
+    fourthColor.textContent = "";
+});
+thirdColor.addEventListener('click', () => {
+    firstColor.textContent = "";
+    secondColor.textContent = "";
+    thirdColor.textContent = "✔";
+    fourthColor.textContent = "";
+});
+fourthColor.addEventListener('click', () => {
+    firstColor.textContent = "";
+    secondColor.textContent = "";
+    thirdColor.textContent = "";
+    fourthColor.textContent = "✔";
+});
+
 
 
 const countElement = document.getElementById('count');
